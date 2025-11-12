@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Sparkles, Zap, Globe, CreditCard } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-gradient-subtle">
       {/* Header */}
@@ -13,8 +16,8 @@ const Index = () => {
             <span className="text-2xl font-bold text-foreground">AutoPage.AI</span>
           </div>
           <div className="flex items-center gap-4">
-            <Button variant="ghost">Entrar</Button>
-            <Button>Começar Grátis</Button>
+            <Button variant="ghost" onClick={() => navigate("/auth")}>Entrar</Button>
+            <Button onClick={() => navigate("/auth")}>Começar Grátis</Button>
           </div>
         </nav>
       </header>
@@ -33,11 +36,11 @@ const Index = () => {
               Envie uma imagem do seu produto e nossa IA gera uma página profissional completa em segundos. Publique instantaneamente em seu próprio domínio.
             </p>
             <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <Button size="lg" className="text-lg shadow-elegant">
+              <Button size="lg" className="text-lg shadow-elegant" onClick={() => navigate("/auth")}>
                 Crie sua Primeira Página
                 <Sparkles className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="text-lg">
+              <Button size="lg" variant="outline" className="text-lg" onClick={() => navigate("/dashboard")}>
                 Ver Demo
               </Button>
             </div>
@@ -104,7 +107,7 @@ const Index = () => {
                   </li>
                 </ul>
               </div>
-              <Button className="w-full" variant="outline">
+              <Button className="w-full" variant="outline" onClick={() => navigate("/auth")}>
                 Começar Grátis
               </Button>
             </Card>
@@ -135,7 +138,7 @@ const Index = () => {
                   </li>
                 </ul>
               </div>
-              <Button className="w-full">
+              <Button className="w-full" onClick={() => navigate("/auth")}>
                 Começar Pro
               </Button>
             </Card>
@@ -163,7 +166,7 @@ const Index = () => {
                   </li>
                 </ul>
               </div>
-              <Button className="w-full" variant="outline">
+              <Button className="w-full" variant="outline" onClick={() => navigate("/auth")}>
                 Começar Business
               </Button>
             </Card>
@@ -179,7 +182,7 @@ const Index = () => {
             <p className="text-lg opacity-90">
               Junte-se a milhares de empreendedores que já estão criando páginas de produto incríveis com IA.
             </p>
-            <Button size="lg" variant="secondary" className="text-lg">
+            <Button size="lg" variant="secondary" className="text-lg" onClick={() => navigate("/auth")}>
               Começar Agora - É Grátis
               <Sparkles className="ml-2 h-5 w-5" />
             </Button>
