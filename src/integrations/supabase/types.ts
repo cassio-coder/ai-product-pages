@@ -14,7 +14,87 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      pages: {
+        Row: {
+          created_at: string | null
+          custom_domain: string | null
+          html_content: string | null
+          id: string
+          image_url: string | null
+          product_description: string | null
+          product_name: string
+          product_price: number | null
+          product_specs: Json | null
+          published: boolean | null
+          subdomain: string | null
+          updated_at: string | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string | null
+          custom_domain?: string | null
+          html_content?: string | null
+          id?: string
+          image_url?: string | null
+          product_description?: string | null
+          product_name: string
+          product_price?: number | null
+          product_specs?: Json | null
+          published?: boolean | null
+          subdomain?: string | null
+          updated_at?: string | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string | null
+          custom_domain?: string | null
+          html_content?: string | null
+          id?: string
+          image_url?: string | null
+          product_description?: string | null
+          product_name?: string
+          product_price?: number | null
+          product_specs?: Json | null
+          published?: boolean | null
+          subdomain?: string | null
+          updated_at?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string | null
+          email: string
+          full_name: string | null
+          id: string
+          max_pages: number | null
+          pages_created: number | null
+          subscription_plan: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          email: string
+          full_name?: string | null
+          id: string
+          max_pages?: number | null
+          pages_created?: number | null
+          subscription_plan?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          email?: string
+          full_name?: string | null
+          id?: string
+          max_pages?: number | null
+          pages_created?: number | null
+          subscription_plan?: string | null
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
